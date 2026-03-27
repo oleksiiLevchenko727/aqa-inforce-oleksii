@@ -9,8 +9,8 @@ aqa-inforce-oleksii/
 │   │
 ├── src/
 │   │   ├── models/
-│   │   │   ├── bookingData.model.ts  # Authorization helper 
-│   │   │   └── roomData.model.ts     # Room creation helper
+│   │   │   ├── bookingData.model.ts  # Booking date data
+│   │   │   └── roomData.model.ts     # Room creation data
 │   │   └── pageObject/
 │   │       └── boocking-roomPage.ts  # Booking room UI pageObject
 │   tests/
