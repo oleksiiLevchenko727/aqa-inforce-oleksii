@@ -1,0 +1,316 @@
+Test Case ID: TC_001
+Title: Verify successful booking flow with valid data
+
+Preconditions:
+  - User is on the booking start page: https://automationintesting.online/
+
+Test Data:
+  Check-in: 23.05.2027
+  Check-out: 27.05.2027
+  First Name: John 	
+  Last Name: Johns
+  Email: nh.2.krlax@gmail.com
+  Phone: +123456789111
+
+Steps:
+  1. Select the check-in date: 23.05.2027 and check-out date: 27.05.2027.
+  2. Click the 'Check Availability' button.
+     - Expected: User is redirected to 'Our Rooms' section.
+  3. Click the 'Book Now' button on the desired room.
+     - Expected: User is redirected to reservation URL with selected dates 
+       (e.g., https://automationintesting.online/reservation/1?checkin=2027-05-23&checkout=2027-05-27).
+  4. Fill in the booking form with the test data(First Name, Last Name, Email, Phone).	
+  5. Click the 'Reserve Now' button.
+  6. Verify confirmation message is displayed:
+      - "Booking Confirmed"
+      - "Your booking has been confirmed for the following dates: 23.05.2027 - 27.05.2027".
+  7. Click the 'Return Home' button.
+  8. **Verify that the user is redirected to the main home page.**
+     - **Expected: The URL in the browser changes to `https://automationintesting.online/`.**
+     - **Expected: The content of the home page (e.g., hero section, navigation, general information) is displayed correctly.**
+     - **Expected: The user can interact with elements on the home page.**
+
+Expected Result:
+  - Booking is successfully completed.
+  - User is navigated back to the home page.
+  - No validation errors are displayed.
+  - No JavaScript errors in the browser console.
+  - No 500 server errors in the network requests.
+
+====================================================================================================================
+
+
+############################################################
+#                  FIRST NAME TEST CASES                   #
+############################################################
+
+Test Case ID: TC_002
+Title: Verify First Name input with minimum allowed length (3 chars)
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-06-01&checkout=2027-06-05
+Test Data:
+  First Name: Mia
+  Last Name: Strickland
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: Booking proceeds. The system accepts the minimum boundary length.
+
+---
+
+Test Case ID: TC_003
+Title: Verify First Name input with maximum allowed length (18 chars)
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-06-06&checkout=2027-06-11
+Test Data:
+  First Name: Christopher-Thomas
+  Last Name: Strickland
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: Booking proceeds. The system accepts the maximum boundary length.
+
+---
+
+Test Case ID: TC_004
+Title: Verify First Name input with less than 3 characters
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-06-12&checkout=2027-06-17
+Test Data:
+  First Name: Ed
+  Last Name: Strickland
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "size must be between 3 and 18" is displayed.
+
+---
+Test Case ID: TC_005
+Title: Verify First Name input with an empty string
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-06-18&checkout=2027-06-23
+Test Data:
+  First Name: 
+  Last Name: Strickland
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "Firstname should not be blank" is displayed.
+
+---
+
+Test Case ID: TC_006
+Title: Verify First Name input with more than 18 characters
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-06-24&checkout=2027-06-29
+Test Data:
+  First Name: Alexandrina-Victoria
+  Last Name: Strickland
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "size must be between 3 and 18" is displayed.
+
+############################################################
+#                   LAST NAME TEST CASES                   #
+############################################################
+
+Test Case ID: TC_007
+Title: Verify Last Name input with minimum allowed length (3 chars)
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-07-01&checkout=2027-07-05
+Test Data:
+  First Name: Sandra
+  Last Name: Lee
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: Booking proceeds. The system accepts the minimum boundary length.
+
+---
+
+Test Case ID: TC_08
+Title: Verify Last Name input with maximum allowed length (30 chars)
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-07-06&checkout=2027-07-11
+Test Data:
+  First Name: Sandra
+  Last Name: Featherstonehaugh-Montgomery
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: Booking proceeds. The system accepts the maximum boundary length.
+
+---
+
+Test Case ID: TC_09
+Title: Verify Last Name input with less than 3 characters
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-07-12&checkout=2027-07-17
+Test Data:
+  First Name: Sandra
+  Last Name: Li
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "size must be between 3 and 30" is displayed.
+
+---
+
+Test Case ID: TC_010
+Title: Verify Last Name input with more than 30 characters
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-07-18&checkout=2027-07-23
+Test Data:
+  First Name: Sandra
+  Last Name: Vozdvizhensky-Svyatopolk-Mirsky
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "size must be between 3 and 30" is displayed.
+
+---
+
+Test Case ID: TC_011
+Title: Verify Last Name input with an empty string
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-07-24&checkout=2027-07-29
+Test Data:
+  First Name: Sandra
+  Last Name: 
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form, leaving Last Name empty.
+Expected Result: An error message "Lastname should not be blank" is displayed.
+
+############################################################
+#                      EMAIL TEST CASES                    #
+############################################################
+
+Test Case ID: TC_012
+Title: Verify email without '@' symbol
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-08-01&checkout=2027-08-05
+Test Data:
+  First Name: Rita 
+  Last Name: Strickland
+  Email: rita.strickland.work.email.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "must be a well-formed email address" is displayed.
+
+---
+
+Test Case ID: TC_013
+Title: Verify email without a domain part
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-08-01&checkout=2027-08-5
+Test Data:
+  First Name: Rita 
+  Last Name: Strickland
+  Email: rita.strickland@
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "must be a well-formed email address" is displayed.
+
+---
+
+Test Case ID: TC_014
+Title: Verify email without a local part
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-08-01&checkout=2027-08-5
+Test Data:
+  First Name: Rita 
+  Last Name: Strickland
+  Email: @email.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "must be a well-formed email address" is displayed.
+
+---
+
+Test Case ID: TC_015
+Title: Verify email containing a space
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-08-01&checkout=2027-08-5
+Test Data:
+  First Name: Rita 
+  Last Name: Strickland
+  Email: rita strickland@email.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "must be a well-formed email address" is displayed.
+
+---
+
+Test Case ID: TC_016
+Title: Verify email input with an empty string
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-08-01&checkout=2027-08-5
+Test Data:
+  First Name: Rita 
+  Last Name: Strickland
+  Email: 
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "must be a well-formed email address" is displayed.
+
+
+############################################################
+#                      PHONE TEST CASES                    #
+############################################################
+
+Test Case ID: TC_017
+Title: Verify phone input with minimum allowed length (11 digits)
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-09-01&checkout=2027-09-05
+Test Data:
+  First Name: Rita 
+  Last Name: Strickland
+  Email: test@example.com
+  Phone: 12345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: Booking proceeds. The system accepts a phone number with 11 digits.
+
+---
+
+Test Case ID: TC_018
+Title: Verify phone input with maximum allowed length (21 digits)
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-09-06&checkout=2027-09-11
+Test Data:
+  First Name: Rita 
+  Last Name: Strickland
+  Email: test@example.com
+  Phone: 123456789012345678901
+Steps: Fill in the booking form with the provided test data.
+Expected Result: Booking proceeds. The system accepts a phone number with 21 digits.
+
+---
+
+Test Case ID: TC_019
+Title: Verify phone input with less than 11 characters
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-09-12&checkout=2027-09-17
+Test Data:
+  First Name: Rita 
+  Last Name: Strickland
+  Email: test@example.com
+  Phone: 1234567890
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "size must be between 11 and 21" is displayed.
+
+---
+
+Test Case ID: TC_020
+Title: Verify phone input with more than 21 characters
+Preconditions:  - User is on the reservation page: https://automationintesting.online/reservation/1?checkin=2027-09-18&checkout=2027-09-23
+Test Data:
+  First Name: Rita 
+  Last Name: Strickland
+  Email: test@example.com
+  Phone: 1234567890123456789012
+Steps: Fill in the booking form with the provided test data.
+Expected Result: An error message "size must be between 11 and 21" is displayed.
+
+---
+
+Test Case ID: TC_021
+Title: Verify that the earlier booked dates show as Unavailable
+Preconditions:  - Must book a room on paticular date and try to book a room on the same date again
+                - User is on the booking start page: https://automationintesting.online/
+Test Data:
+  Check In: 01.10.2027
+  Check Out: 05.10.2027
+  First Name: Rita 
+  Last Name: Strickland
+  Email: test@example.com
+  Phone: +12345678901
+Steps: - Should select a date
+       - Fill in the booking form with the provided test data.
+       - Click on "Check Availability" button
+Expected Result: The number of available rooms has decreased by one..
+
+
