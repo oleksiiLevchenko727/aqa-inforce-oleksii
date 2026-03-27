@@ -23,7 +23,7 @@ aqa-inforce-oleksii/
 ├── package.json                      # Project dependencies
 └── README.md                         # This file
 
-**Installation**
+Installation
 Clone or create the project folder:
 git clone https://github.com/oleksiiLevchenko727/aqa-inforce-oleksii.git 
 cd aqa-inforce-oleksii
@@ -33,12 +33,12 @@ Install Playwright browsers:
 npx playwright install
 setup create on the root .env file, base on data from .env.example
 
-**Test Functionality**
+Test Functionality
 This project covers end-to-end, integration, and validation testing for the hotel booking system.
 UI tests are executed sequentially to verify the booking forms functionality and validation rules.
-API tests failing: Verify that the Admin and User APIs are available. Check authentication credentials and tokens.Set
+API tests failing: Verify that the Admin and User APIs are available. Check authentication credentials and tokens.
 
-**Useful Commands:**
+Useful Commands:
 
 Check Playwright version
 
