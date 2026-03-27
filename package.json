@@ -1,0 +1,27 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "AQA-Inforce-Oleksii",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "format": "prettier --write \"**/*.{js,ts,json,css,md}\"",
+    "lint": "eslint \"**/*.{js,ts}\"",
+    "lint:fix": "eslint \"**/*.{js,ts}\" --fix"
+  },
+  "keywords": [],
+  "author": "Oleksii",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0",
+    "eslint": "^10.1.0",
+    "globals": "^17.4.0",
+    "typescript-eslint": "^8.57.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
