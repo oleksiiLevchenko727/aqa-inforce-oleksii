@@ -12,13 +12,13 @@ aqa-inforce-oleksii/
 │   │   │   ├── bookingData.model.ts  # Booking date data
 │   │   │   └── roomData.model.ts     # Room creation data
 │   │   └── pageObject/
-│   │       └── boocking-roomPage.ts  # Booking room UI pageObject
+│   │       └── booking-roomPage.ts   # Booking room UI pageObject
 │   tests/
-│   ├── api/
-│   │   └── creation-booking-room.api.spec.ts   # API tests for room management
-│   ├── ui/
-│   │   └── boocking-room.ui.spec.ts  # UI tests for the booking process
-│   env.example                       # ENV file with credentials
+│       ├──api/
+│       │   └──creation-booking-room.api.spec.ts   # API tests for room management
+│       └── ui/
+│           └── boocking-room.ui.spec.ts           # UI tests for the booking process
+├── env.example                       # ENV file with credentials
 ├── playwright.config.js              # Playwright configuration
 ├── package.json                      # Project dependencies
 └── README.md                         # This file
@@ -31,10 +31,10 @@ Install dependencies:
 npm install
 Install Playwright browsers:
 npx playwright install
-setup create on the root .env file, base on data from .env.example
+Set up creation on the root .env file, based on data from .env.example
 
 Test Functionality
-This project covers end-to-end, integration, and validation testing for the hotel booking system.
+This project covers end-to-end integration and validation testing for the hotel booking system.
 UI tests are executed sequentially to verify the booking forms functionality and validation rules.
 API tests failing: Verify that the Admin and User APIs are available. Check authentication credentials and tokens.
 
