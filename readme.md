@@ -4,8 +4,8 @@ This project contains automated tests for a hotel booking system using Playwrigh
 Project Structure
 aqa-inforce-oleksii/
 ├── helpers/ 
-│   │  ├── auth.helper.ts  # Authorization helper 
-│   │  └── room.helper.ts  # Room creation helper
+│   │   ├── auth.helper.ts  # Authorization helper 
+│   │   └── room.helper.ts  # Room creation helper
 │   │
 ├── src/
 │   │   ├── models/
