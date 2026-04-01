@@ -1,5 +1,5 @@
 ```sh
-AQA InForce Automation Project
+----AQA InForce Automation Project----
 This project contains automated tests for a hotel booking system using Playwright for both UI and API testing.
 Project Structure
 aqa-inforce-oleksii/
@@ -22,8 +22,9 @@ aqa-inforce-oleksii/
 ├── playwright.config.js              # Playwright configuration
 ├── package.json                      # Project dependencies
 └── README.md                         # This file
-
-Installation
+######################################
+------------ Installation ------------
+######################################
 Clone or create the project folder:
 git clone https://github.com/oleksiiLevchenko727/aqa-inforce-oleksii.git 
 cd aqa-inforce-oleksii
@@ -33,13 +34,13 @@ Install Playwright browsers:
 npx playwright install
 Set up creation on the root .env file, based on data from .env.example
 
-Test Functionality
+----------Test Functionality----------
 This project covers end-to-end integration and validation testing for the hotel booking system.
 UI tests are executed sequentially to verify the booking forms functionality and validation rules.
 API tests failing: Verify that the Admin and User APIs are available. Check authentication credentials and tokens.
 
-Useful Commands:
 
+---------- Useful Commands: ----------
 Check Playwright version
 
 npx playwright --version
